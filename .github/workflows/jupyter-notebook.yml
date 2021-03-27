@@ -19,13 +19,32 @@ jobs:
       with:
         python-version: 3.7
 
-    - name: Setup Miniconda
-      uses: goanpeca/setup-miniconda@v1.1.2
+    # Conda install
+    - name: Cache conda
+      uses: actions/cache@v2
+      env:
+        # Increase this value to reset cache if etc/example-environment.yml has not changed
+        CACHE_NUMBER: 0
       with:
-        environment-file: environment.yml
-        activate-environment: jupyter_workspace
-        python-version: 3.7
-        auto-activate-base: false
+        path: ~/conda_pkgs_dir
+        key:
+          ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{
+          hashFiles('environment.yml') }}
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-activate-base: true
+        activate-environment: "jupyter_workspace"
+    - run: conda info
+    - run: conda list
+    - run: conda config --show
+    #- name: Setup Miniconda
+    #  uses: goanpeca/setup-miniconda@v1.1.2
+    #  with:
+    #    environment-file: environment.yml
+    #    activate-environment: jupyter_workspace
+    #    python-version: 3.7
+    #    auto-activate-base: false
 
     # this Action should follow steps to set up Python build environment
     #- name: Install Python dependencies
