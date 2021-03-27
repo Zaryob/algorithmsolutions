@@ -4,6 +4,4 @@
 - file: intro
 - file: content
   sections:
-    - file: markdown
-    - file: notebooks
-- file: Untitled
+    - file: ProblemSetValues/100_the_3n_plus_1_problem
