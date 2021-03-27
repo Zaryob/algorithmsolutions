@@ -3,5 +3,14 @@
 #
 - file: intro
 - file: content
+- file: ProblemSetValues/index
   sections:
-    - file: ProblemSetValues/100_the_3n_plus_1_problem
+  - file: ProblemSetValues/OnlineJudgeSets/index
+    sections:
+      - file: ProblemSetValues/OnlineJudgeSets/100_the_3n_plus_1_problem
+  - file: ProblemSetValues/POJSets/index
+    sections:
+      - file: ProblemSetValues/POJSets/1003_Hangover.ipynb 
+      - file: ProblemSetValues/POJSets/1007_DNA_sorting.ipynb  
+      - file: ProblemSetValues/POJSets/2136_VerticalHistogram.ipynb  
+
