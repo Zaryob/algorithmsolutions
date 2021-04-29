@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PKU JudgeOnline" href="../POJSets/index.html" />
+    <link rel="next" title="11902- Dominator" href="11902_dominator.html" />
     <link rel="prev" title="OnlineJudge Problem Sets" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -123,6 +123,11 @@
        . The 3n + 1 problem
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="11902_dominator.html">
+       11902- Dominator
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -157,6 +162,33 @@
         2136.
        </strong>
        Vertical Histogram
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HackerRank/eventree.html">
+     Even Tree
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Kattis/index.html">
+     Kattis Problem Sets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Kattis/BirthdayParty.html">
+       Birthday Party
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Kattis/BlockCrusher.html">
+       Block Crusher
       </a>
      </li>
     </ul>
@@ -381,7 +413,7 @@ You can assume that no operation overflows a 32-bit integer.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">lenght_of_algorithm</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">lenght_of_algorithm</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
     <span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span> <span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
     
     <span class="nl">loop_jump</span><span class="p">:</span>
@@ -410,56 +442,6 @@ You can assume that no operation overflows a 32-bit integer.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input_line_9
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>error
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>function definition is not allowed here
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> long long int lenght_of_algorithm(int a){
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                         ^
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -483,17 +465,6 @@ You can assume that no operation overflows a 32-bit integer.</p>
 <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="o">&lt;&lt;</span> <span class="n">lenght</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
 <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_10:11:29: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">use of undeclared identifier &#39;lenght_of_algorithm&#39;</span>
-    long long int tlenght = lenght_of_algorithm(i);
-<span class=" -Color -Color-Bold -Color-Bold-Green">                            ^</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
 </pre></div>
 </div>
 </div>
@@ -597,7 +568,7 @@ You can assume that no operation overflows a 32-bit integer.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">OnlineJudge Problem Sets</a>
-    <a class='right-next' id="next-link" href="../POJSets/index.html" title="next page">PKU JudgeOnline</a>
+    <a class='right-next' id="next-link" href="11902_dominator.html" title="next page">11902- Dominator</a>
 
         </div>
         

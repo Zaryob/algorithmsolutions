@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Party &#8212; Algorithm Solutions</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Block Crusher" href="BlockCrusher.html" />
+    <link rel="prev" title="Kattis Problem Sets" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algorithm Solutions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content.html">
+   Content in Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Problem Sets
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../OnlineJudgeSets/index.html">
+     OnlineJudge Problem Sets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OnlineJudgeSets/100_the_3n_plus_1_problem.html">
+       <strong>
+        100
+       </strong>
+       . The 3n + 1 problem
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OnlineJudgeSets/11902_dominator.html">
+       11902- Dominator
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../POJSets/index.html">
+     PKU JudgeOnline
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../POJSets/1003_Hangover.html">
+       <strong>
+        1003.
+       </strong>
+       *  Hangover
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../POJSets/1007_DNA_sorting.html">
+       <strong>
+        1007.
+       </strong>
+       DNA Sorting
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../POJSets/2136_VerticalHistogram.html">
+       <strong>
+        2136.
+       </strong>
+       Vertical Histogram
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HackerRank/eventree.html">
+     Even Tree
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Kattis Problem Sets
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Birthday Party
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="BlockCrusher.html">
+       Block Crusher
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/ProblemSetValues/Kattis/BirthdayParty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Zaryob/algorithmsolutions"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Zaryob/algorithmsolutions/issues/new?title=Issue%20on%20page%20%2FProblemSetValues/Kattis/BirthdayParty.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Zaryob/algorithmsolutions/master?urlpath=tree/docs/ProblemSetValues/Kattis/BirthdayParty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input">
+   Input
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output">
+   Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-input">
+   Sample Input
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-output">
+   Sample Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebook-style-code">
+   Jupyter Notebook Style Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#whole-code">
+   Whole Code
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="birthday-party">
+<h1>Birthday Party<a class="headerlink" href="#birthday-party" title="Permalink to this headline">¶</a></h1>
+<p>James needs some help figuring out whether he can invite all of his friends to his birthday party. Luckily for James, he doesn’t have to invite all of his friends by himself, because his friends will forward invitations to each other.</p>
+<p>Consider this example: James has three friends: Lucy, Sue, and Mark. James is friends with all three of them, but unfortunately he doesn’t have Mark’s phone number so he can’t invite him directly. However, Sue has Mark’s number (and vice versa) so she can invite Mark to James’s party.</p>
+<p>The question that you need to answer is that if anyone lost one of the phone numbers for anyone else, would it be impossible to invite everybody to the party? Continuing the above example, if Sue lost Mark’s number (the edge denoted by the red arrow above), then it would not be possible to invite everybody to the party. You should assume that if Sue loses Mark’s number, then Mark will also lose Sue’s number. Please help James figure out if he is at risk at having someone miss his party if any pair of friends loses contact with each other.</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p>The input will contain up to 10 test cases. Each test case contains on a single line two integers p (1≤p≤100) and c (0≤c≤5000). p represents the number of people James wants to invite to the party, including himself. The next c lines represent the connections among James’s friends represented as two integers a (0≤a&lt;p) and b (0≤b&lt;p), where a is not equal to b. This means that friend number a has friend number b’s phone number and vice versa.</p>
+<p>The input will be terminated by a line containing 2 zeros. This case should not be processed.</p>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>For each test case, if a pair could lose each other’s numbers and make it so that not everybody can be invited to the party, print “Yes”. Otherwise, print “No”.</p>
+</div>
+<div class="section" id="sample-input">
+<h2>Sample Input<a class="headerlink" href="#sample-input" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="mi">1</span>
+<span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">4</span> <span class="mi">4</span>
+<span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">2</span>
+<span class="mi">2</span> <span class="mi">3</span>
+<span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">5</span> <span class="mi">5</span>
+<span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">2</span>
+<span class="mi">0</span> <span class="mi">3</span>
+<span class="mi">3</span> <span class="mi">4</span>
+<span class="mi">3</span> <span class="mi">1</span>
+<span class="mi">0</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sample-output">
+<h2>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Yes</span>
+<span class="n">No</span>
+<span class="n">Yes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jupyter-notebook-style-code">
+<h2>Jupyter Notebook Style Code<a class="headerlink" href="#jupyter-notebook-style-code" title="Permalink to this headline">¶</a></h2>
+<p>Standart library and <code class="docutils literal notranslate"><span class="pre">iostream</span></code> library include</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+
+<span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Deep search algoritm:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">deep_first_search</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">adj</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">up</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">down</span><span class="p">,</span> <span class="kt">int</span> <span class="n">parent</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">next</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">start</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">up</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">==</span> <span class="mi">-1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">up</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+            <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+            <span class="n">total</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">deep_first_search</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">next</span><span class="p">);</span>
+            <span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]);</span>
+        <span class="p">}</span>
+
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">next</span> <span class="o">!=</span> <span class="n">parent</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In vector it finds connections.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">find_connection</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">adj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">adj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">up</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">down</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="n">up</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">down</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">deep_first_search</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">up</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">down</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recursively find element in vector.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">-1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Add a and b onto vector</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">join</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>MAIN Function: (main)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span> <span class="o">&gt;&gt;</span> <span class="n">n2</span><span class="p">;</span>
+
+        <span class="n">adj</span><span class="p">[</span><span class="n">n1</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n2</span><span class="p">);</span>
+        <span class="n">adj</span><span class="p">[</span><span class="n">n2</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+
+        <span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">bool</span> <span class="n">connected</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">connected</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">connected</span> <span class="o">||</span> <span class="n">find_connection</span><span class="p">(</span><span class="n">adj</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Yes&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;No&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="whole-code">
+<h2>Whole Code<a class="headerlink" href="#whole-code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">deep_first_search</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">adj</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">up</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">down</span><span class="p">,</span> <span class="kt">int</span> <span class="n">parent</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">next</span> <span class="p">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">start</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">up</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">==</span> <span class="mi">-1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">up</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+            <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">;</span>
+            <span class="n">total</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">deep_first_search</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">next</span><span class="p">);</span>
+            <span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]);</span>
+        <span class="p">}</span>
+
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">next</span> <span class="o">!=</span> <span class="n">parent</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">down</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">down</span><span class="p">[</span><span class="n">next</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">find_connection</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">adj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">adj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">up</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">down</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="n">up</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">down</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">deep_first_search</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">up</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">down</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">==</span> <span class="mi">-1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">join</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">d</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&amp;&amp;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">adj</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span> <span class="o">&gt;&gt;</span> <span class="n">n2</span><span class="p">;</span>
+
+            <span class="n">adj</span><span class="p">[</span><span class="n">n1</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n2</span><span class="p">);</span>
+            <span class="n">adj</span><span class="p">[</span><span class="n">n2</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+
+            <span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="kt">bool</span> <span class="n">connected</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">!=</span> <span class="n">find</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">connected</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">connected</span> <span class="o">||</span> <span class="n">find_connection</span><span class="p">(</span><span class="n">adj</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Yes&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;No&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "xcpp14"
+        },
+        kernelOptions: {
+            kernelName: "xcpp14",
+            path: "./ProblemSetValues/Kattis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'xcpp14'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Kattis Problem Sets</a>
+    <a class='right-next' id="next-link" href="BlockCrusher.html" title="next page">Block Crusher</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The set of solutions for some UvA challanges.<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
