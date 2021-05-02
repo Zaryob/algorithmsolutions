@@ -429,7 +429,7 @@ t_to: end nodes for each edge, (Match by index to t_from.)
 
 <span class="n">string</span> <span class="nf">ltrim</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="p">);</span>
 <span class="n">string</span> <span class="nf">rtrim</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="p">);</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">split</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="p">);</span>
+<span class="k">auto</span> <span class="nf">split</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="p">);</span>
 
 <span class="k">using</span> <span class="n">node</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
 </pre></div>
@@ -494,7 +494,7 @@ t_to: end nodes for each edge, (Match by index to t_from.)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">split</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="nf">split</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokens</span><span class="p">;</span>
 
     <span class="n">string</span><span class="o">::</span><span class="n">size_type</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -510,56 +510,6 @@ t_to: end nodes for each edge, (Match by index to t_from.)
 
     <span class="k">return</span> <span class="n">tokens</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input_line_12
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>error
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>: 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>function definition is not allowed here
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> vector&lt;string&gt; split(const string &amp;str) {
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                         ^
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
 </pre></div>
 </div>
 </div>
@@ -604,16 +554,7 @@ t_to: end nodes for each edge, (Match by index to t_from.)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_13:5:32: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">use of undeclared identifier &#39;split&#39;</span>
-vector&lt;string&gt; t_nodes_edges = split(rtrim(t_nodes_edges_temp));
-<span class=" -Color -Color-Bold -Color-Bold-Green">                               ^</span>
-<span class=" -Color -Color-Bold">input_line_13:13:32: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">use of undeclared identifier &#39;split&#39;</span>
-    vector&lt;string&gt; t_from_to = split(rtrim(t_from_to_temp));
-<span class=" -Color -Color-Bold -Color-Bold-Green">                               ^</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Standard</span> <span class="ne">Exception</span><span class="p">:</span> <span class="n">stoi</span>
 </pre></div>
 </div>
 </div>
