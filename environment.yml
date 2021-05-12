@@ -15,3 +15,4 @@ dependencies:
   - pip:
     - quantecon
     - jupyter-book>=0.7.0b
+    - jupyter-c-kernel

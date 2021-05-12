@@ -30,8 +30,9 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate jupyter_notebook
+          NOTEBOOK_PREFIX=$(conda env list | sed -n -e '4{p;q}' | awk '{$1=$1};1' | cut -d ' ' -f3)
+          install_c_kernel --prefix $NOTEBOOK_PREFIX
           jupyter-book build .
-
 
        # Push the book's HTML to github-pages
       - name: GitHub Pages action
