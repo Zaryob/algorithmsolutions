@@ -8,8 +8,14 @@
   - file: Fundamentals/ArraysIterationsInvariants.ipynb
   - file: Fundamentals/ListStackQueue.ipynb
 - file: Algorithms/index
+  sections:
+  - file: Algorithms/searching.ipynb
 - file: DataStructure/index
+  sections:
+  - file: DataStructure/trees.ipynb
 - file: Advaced/index
+  sections:
+  - file: Advaced/bit_tricks.ipynb
 - file: ProblemSetValues/index
   sections:
   - file: ProblemSetValues/OnlineJudgeSets/index
