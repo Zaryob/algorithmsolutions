@@ -3,6 +3,13 @@
 #
 - file: intro
 - file: content
+- file: Fundamentals/index
+  sections:
+  - file: Fundamentals/ArraysIterationsInvariants.ipynb
+  - file: Fundamentals/ListStackQueue.ipynb
+- file: Algorithms/index
+- file: DataStructure/index
+- file: Advaced/index
 - file: ProblemSetValues/index
   sections:
   - file: ProblemSetValues/OnlineJudgeSets/index
@@ -22,4 +29,3 @@
       - file: ProblemSetValues/Kattis/BirthdayParty.ipynb
       - file: ProblemSetValues/Kattis/BlockCrusher.ipynb
       
-
