@@ -1,7 +1,6 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: intro
+format: jb-article
+root: intro
+sections:
 - file: content
 - file: Fundamentals/index
   sections:
@@ -20,18 +19,17 @@
   sections:
   - file: ProblemSetValues/OnlineJudgeSets/index
     sections:
-      - file: ProblemSetValues/OnlineJudgeSets/100_the_3n_plus_1_problem.ipynb
-      - file: ProblemSetValues/OnlineJudgeSets/11902_dominator.ipynb
+    - file: ProblemSetValues/OnlineJudgeSets/100_the_3n_plus_1_problem.ipynb
+    - file: ProblemSetValues/OnlineJudgeSets/11902_dominator.ipynb
   - file: ProblemSetValues/POJSets/index
     sections:
-      - file: ProblemSetValues/POJSets/1003_Hangover.ipynb 
-      - file: ProblemSetValues/POJSets/1007_DNA_sorting.ipynb  
-      - file: ProblemSetValues/POJSets/2136_VerticalHistogram.ipynb 
+    - file: ProblemSetValues/POJSets/1003_Hangover.ipynb
+    - file: ProblemSetValues/POJSets/1007_DNA_sorting.ipynb
+    - file: ProblemSetValues/POJSets/2136_VerticalHistogram.ipynb
   - file: ProblemSetValues/HackerRank/index
     sections:
-      - file: ProblemSetValues/HackerRank/eventree.ipynb
+    - file: ProblemSetValues/HackerRank/eventree.ipynb
   - file: ProblemSetValues/Kattis/index
     sections:
-      - file: ProblemSetValues/Kattis/BirthdayParty.ipynb
-      - file: ProblemSetValues/Kattis/BlockCrusher.ipynb
-      
+    - file: ProblemSetValues/Kattis/BirthdayParty.ipynb
+    - file: ProblemSetValues/Kattis/BlockCrusher.ipynb
