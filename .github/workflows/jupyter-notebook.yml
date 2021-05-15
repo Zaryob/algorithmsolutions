@@ -29,9 +29,6 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate jupyter_notebook
-          pip install jupyter_latex_envs --upgrade
-          jupyter nbextension install --py latex_envs --user
-          jupyter nbextension enable latex_envs --user --pye
           NOTEBOOK_PREFIX=$(conda env list | sed -n -e '4{p;q}' | awk '{$1=$1};1' | cut -d ' ' -f3)
           install_c_kernel --prefix $NOTEBOOK_PREFIX
           

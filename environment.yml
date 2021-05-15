@@ -16,3 +16,7 @@ dependencies:
     - quantecon
     - jupyter-book>=0.7.0b
     - jupyter-c-kernel
+    - jupyter-book
+    - matplotlib
+    - numpy
+    - hypothesis
