@@ -11,6 +11,12 @@ sections:
   - file: Algorithms/sorting.ipynb
     sections:
     - file: Algorithms/index.ipynb
+    - file: Algorithms/bubble.ipynb
+    - file: Algorithms/selection.ipynb
+    - file: Algorithms/quick.ipynb
+    - file: Algorithms/merge.ipynb
+    - file: Algorithms/heap.ipynb
+    - file: Algorithms/performans.ipynb
 - file: DataStructure/index
   sections:
   - file: DataStructure/trees.ipynb
