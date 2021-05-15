@@ -4,40 +4,42 @@ sections:
 - file: content
 - file: Fundamentals/index
   sections:
-  - file: Fundamentals/ArraysIterationsInvariants.ipynb
-  - file: Fundamentals/ListStackQueue.ipynb
+  - file: Fundamentals/ArraysIterationsInvariants
+  - file: Fundamentals/ListStackQueue
 - file: Algorithms/index
   sections:
-  - file: Algorithms/sorting/index.ipynb
+  - file: Algorithms/sorting/index
     sections:
-    - file: Algorithms/sorting/bubble.ipynb
-    - file: Algorithms/sorting/selection.ipynb
-    - file: Algorithms/sorting/quick.ipynb
-    - file: Algorithms/sorting/merge.ipynb
-    - file: Algorithms/sorting/heap.ipynb
-    - file: Algorithms/sorting/insertion.ipynb
-    - file: Algorithms/sorting/performans.ipynb
+    - file: Algorithms/sorting/bubble
+    - file: Algorithms/sorting/selection
+    - file: Algorithms/sorting/quick
+    - file: Algorithms/sorting/merge
+    - file: Algorithms/sorting/heap
+    - file: Algorithms/sorting/insertion
+    - file: Algorithms/sorting/performans
 - file: DataStructure/index
   sections:
-  - file: DataStructure/trees.ipynb
+  - file: DataStructure/trees
 - file: Advaced/index
   sections:
-  - file: Advaced/bit_tricks.ipynb
+  - file: Advaced/bit_tricks
 - file: ProblemSetValues/index
   sections:
   - file: ProblemSetValues/OnlineJudgeSets/index
     sections:
-    - file: ProblemSetValues/OnlineJudgeSets/100_the_3n_plus_1_problem.ipynb
-    - file: ProblemSetValues/OnlineJudgeSets/11902_dominator.ipynb
+    - file: ProblemSetValues/OnlineJudgeSets/100_the_3n_plus_1_problem
+    - file: ProblemSetValues/OnlineJudgeSets/11902_dominator
   - file: ProblemSetValues/POJSets/index
     sections:
-    - file: ProblemSetValues/POJSets/1003_Hangover.ipynb
-    - file: ProblemSetValues/POJSets/1007_DNA_sorting.ipynb
-    - file: ProblemSetValues/POJSets/2136_VerticalHistogram.ipynb
+    - file: ProblemSetValues/POJSets/1003_Hangover
+    - file: ProblemSetValues/POJSets/1007_DNA_sorting
+    - file: ProblemSetValues/POJSets/2136_VerticalHistogram
   - file: ProblemSetValues/HackerRank/index
     sections:
-    - file: ProblemSetValues/HackerRank/eventree.ipynb
+    - file: ProblemSetValues/HackerRank/eventree
   - file: ProblemSetValues/Kattis/index
     sections:
-    - file: ProblemSetValues/Kattis/BirthdayParty.ipynb
-    - file: ProblemSetValues/Kattis/BlockCrusher.ipynb
+    - file: ProblemSetValues/Kattis/BirthdayParty
+    - file: ProblemSetValues/Kattis/BlockCrusher
+    - file: ProblemSetValues/Kattis/IslandHopping
+    - file: ProblemSetValues/Kattis/PickupStics
