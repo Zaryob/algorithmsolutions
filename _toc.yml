@@ -8,7 +8,9 @@ sections:
   - file: Fundamentals/ListStackQueue.ipynb
 - file: Algorithms/index
   sections:
-  - file: Algorithms/searching.ipynb
+  - file: Algorithms/sorting.ipynb
+    sections:
+    - file: Algorithms/index.ipynb
 - file: DataStructure/index
   sections:
   - file: DataStructure/trees.ipynb

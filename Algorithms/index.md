@@ -15,6 +15,7 @@ Most algorithms are designed to be implemented as computers. However, it is also
 
 Important types of algorithms
 
+  * Sorting algorithms
   * Search algorithms
   * Memory management algorithms
   * Computer graphics algorithms
@@ -25,6 +26,5 @@ Important types of algorithms
   * Crypto algorithms or cryptographic algorithms
   * Root finding algorithms
   * Optimization algorithms
-  * Sorting algorithms
   * Data compression algorithms
   

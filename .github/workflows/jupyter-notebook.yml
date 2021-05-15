@@ -25,13 +25,20 @@ jobs:
       #- name: Install jupyter_book
       #  shell: bash -l {0}
       #  run: pip install git+https://github.com/leilaicruz/jupyter-book.git@master
-
+      - name: Prepare Jupyter Environment
+        shell: bash -l {0}
+        run: |
+          conda activate jupyter_notebook
+          pip install jupyter_latex_envs --upgrade
+          jupyter nbextension install --py latex_envs --user
+          jupyter nbextension enable latex_envs --user --pye
+          NOTEBOOK_PREFIX=$(conda env list | sed -n -e '4{p;q}' | awk '{$1=$1};1' | cut -d ' ' -f3)
+          install_c_kernel --prefix $NOTEBOOK_PREFIX
+          
       - name: Build Jupyter Book
         shell: bash -l {0}
         run: |
           conda activate jupyter_notebook
-          NOTEBOOK_PREFIX=$(conda env list | sed -n -e '4{p;q}' | awk '{$1=$1};1' | cut -d ' ' -f3)
-          install_c_kernel --prefix $NOTEBOOK_PREFIX
           jupyter-book build .
 
        # Push the book's HTML to github-pages
