@@ -8,16 +8,15 @@ sections:
   - file: Fundamentals/ListStackQueue.ipynb
 - file: Algorithms/index
   sections:
-  - file: Algorithms/sorting.ipynb
+  - file: Algorithms/sorting/index.ipynb
     sections:
-    - file: Algorithms/index.ipynb
-    - file: Algorithms/bubble.ipynb
-    - file: Algorithms/selection.ipynb
-    - file: Algorithms/quick.ipynb
-    - file: Algorithms/merge.ipynb
-    - file: Algorithms/heap.ipynb
-    - file: Algorithms/insertion.ipynb
-    - file: Algorithms/performans.ipynb
+    - file: Algorithms/sorting/bubble.ipynb
+    - file: Algorithms/sorting/selection.ipynb
+    - file: Algorithms/sorting/quick.ipynb
+    - file: Algorithms/sorting/merge.ipynb
+    - file: Algorithms/sorting/heap.ipynb
+    - file: Algorithms/sorting/insertion.ipynb
+    - file: Algorithms/sorting/performans.ipynb
 - file: DataStructure/index
   sections:
   - file: DataStructure/trees.ipynb
