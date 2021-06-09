@@ -21,6 +21,7 @@ sections:
   - file: Algorithms/search/index
     sections:
     - file: Algorithms/search/linear
+    - file: Algorithms/search/binary
 - file: DataStructure/index
   sections:
   - file: DataStructure/trees
