@@ -7,6 +7,6 @@ There are some algorithms for searching.  Searching algorithms grouped into two.
 They can be listed as:
  * Linear Search
  * Binary Search
- * Deep First Tree Search
- * Cross (Shallow Priority) Seach
+ * Deep First Search
+ * Cross Seach (Breadth First Search)
  
