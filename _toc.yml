@@ -11,12 +11,16 @@ sections:
   - file: Algorithms/sorting/index
     sections:
     - file: Algorithms/sorting/bubble
+    - file: Algorithms/sorting/bubble
     - file: Algorithms/sorting/selection
     - file: Algorithms/sorting/quick
     - file: Algorithms/sorting/merge
     - file: Algorithms/sorting/heap
     - file: Algorithms/sorting/insertion
     - file: Algorithms/sorting/performans
+  - file: Algorithms/search/index
+    sections:
+    - file: Algorithms/search/linear
 - file: DataStructure/index
   sections:
   - file: DataStructure/trees
