@@ -1,5 +1,5 @@
 Algorithms
-===================
+==========
 
 Firstly I'm gonna represent `algorithms`. Because this silly computers everytime works how we code them up. They cannot optimize any of codes(I'm not mentioning about compilers). If you coded a sorting with long way for example topological sort or bubble sort, it cannot work as fast as merge sort etc.
 
